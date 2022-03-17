@@ -1,7 +1,8 @@
-WIP
+# Author's Note
 
 The tagline for this whole GLP is "Dynamic Defense", meaning that we look to apply physical and cyber defense concepts in an environment, but that both environments affect the other in some way. This GLP would be primarily focused on base defense, but would include some side missions that pop up outside the base.
-A lot of defense, as you know, isn't a matter of how fast you can counter-type against an attacker. Instead, it's how well you set up services or use tools to protect your infrastructure. So what I want to do is focus on a small handful of services and tools, no more than 3, for the cadets to either deploy or use in some fashion. A list of potential options include:
+
+A lot of defense, as you know, isn't a matter of how fast you can counter-type against an attacker. Instead, it's how well you set up services or use tools to protect your infrastructure. So what I want to do is focus on a small handful of services and tools for the cadets to either deploy or use in some fashion. A list of potential options include:
 
 1. Firewall rules
 2. Snort/Suricata
@@ -11,6 +12,7 @@ A lot of defense, as you know, isn't a matter of how fast you can counter-type a
 6. Basic networking (i.e. PacketTracer, Wireshark)
 
 As the GLP continues, there may be a list of cyber-related tasks that need doing. For example, getting the IP address of each cadet's phones and allowing traffic from them to the main computer via firewalls. Or, comms just went down, so cyber has to complete some short task (i.e. "find the malware with X tool") to get them back up, and until they do people on the ground are not allowed to communicate. They would be very simple tasks, but there would be enough of them that the cyber operator needs to prioritize what needs doing as the GLP goes along.
+
 At the same time, the people guarding the cyber operator would need to conduct base defense procedures. There may be people moving in and out, or they may have to go question/detain someone sketchy-looking. Maybe during the GLP, the cyber operator loses the use of some tool or service, but intel has located the source of the disturbance (an enemy hacker nearby). It would be a matter of covering each other's backs, and having a direct, tangible impact on both of their tactical missions.
 
 # CTX1 - Operation Diamondhouse
@@ -34,7 +36,7 @@ The CTX is a timed trial, where the duration is partially on the cyber team's ab
 The CTX admin will be expected to use a space that is suitable for base defense. It can be performed in indoor or outdoor locations, as long as there is wireless Internet connection (a single laptop can suffice for the cyber domain). When implementing the CTX, keep the following in mind:
 
 1. The cyber domain assumes that some of the skills learned in CTX1 can be applied here, namely SSH.
-    - If you do not feel confident that the trainees have retained that knowledge, feel free to include additional reminders or resources for it.
+    - If you do not feel confident that the cadets have retained that knowledge, feel free to include additional reminders or resources for it.
 2. The land domain should have a variety of scenarios ready to be deployed against the trainees as they protect their team and their base.
     - Upset locals, enemy scouts, social engineers, guns-blazing OPFOR, etc.
 3. When giving the optional objectives to the land domain, make it so that urgency is needed to complete them.
@@ -71,17 +73,22 @@ Tools:
     - sudo iptables -A OUTPUT -p tcp --sport 22 -m conntrack --ctstate ESTABLISHED -j ACCEPT
 4. Have an easy set of credentials for the PC1, but have a much more difficult one for PC2 (examples below)
     - PC1
-        • Username: user1
-        • Password: password
+        • Username: _user1_
+        • Password: _password_
     - PC2
-        • Username: user2
-        • Password: Y0uW1llNev3rGue$$!
+        • Username: _user2_
+        • Password: _Y0uW1llNev3rGue$$!_
 
 ### Scenario
 
 Team is briefed with the following:
 
-    -
+    FOB Bravo has been established along the border of a near-peer nation. However, an internal vulnerability scan has reported that the physical and cyber defenses are in need of reinforcing. Your team has been assigned to provide added security to a portion of the FOB, while also configuring the firewalls on two sensitive devices to ensure that they are better protected against attacks. There have been OPFOR sighted within the region, and they may attempt to undermine both physical and cyber operations. Swift, decisive action will be needed to counteract these efforts. Allied military and civilian personnel are also active in the region, and proper care must be taken to ensure their objectives are not unnecessarily hindered.
+    Your mission is complete once the firewalls have been properly configured, and you have verified it with the proper scanning technology. Ensure that OPSEC is maintained at all times, and that details of the firewall configurations are kept away from any unauthorized personnel. 
+    For base entry:
+        • The challenge phrase is "**Wire**"
+        • The normal response is "**Chip**"
+        • The duress response is "**Port**"
 
 Print out the following and hand the useful information to them:
 
@@ -93,7 +100,11 @@ Print out the following and hand the useful information to them:
 
 ### Opfor Guidance
 
--
+1. Feel free to sandbox some approaches to the FOB. While cyber is a decent portion of this GLP, the cadets are still being evaluated on their base defense strategies.
+2. 
 
 ### Onsite Setup
 1. -
+2. -
+3. -
+4. Keep track of time. Every 10 minutes after the briefing phase, include a new challenge to the team that has a 5 minute time limit. IED/UXOs can be located on the premises, a DDoS attack is launched and all the cadets' personal devices are a part of the botnet, hostile forces are spotted tampering with cables just outside of the base's premises, etc. 
