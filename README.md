@@ -31,7 +31,7 @@ If you would like to perform this CTX you will need the following:
 
 ### Expected Design
 
-The CTX is a timed trial, where the duration is partially on the cyber team's ability to complete their tasks. However, the land domain will have opportunities to not only protect their techy allies, but also to support and expedite their mission with optional objectives.
+The CTX is a timed trial, where the duration is partially on the cyber team's ability to complete their tasks. However, the land domain will have opportunities to not only protect their techy allies, but also to support and expedite their mission with additional objectives.
 
 The CTX admin will be expected to use a space that is suitable for base defense. It can be performed in indoor or outdoor locations, as long as there is wireless Internet connection (a single laptop can suffice for the cyber domain). When implementing the CTX, keep the following in mind:
 
@@ -39,7 +39,7 @@ The CTX admin will be expected to use a space that is suitable for base defense.
     - If you do not feel confident that the cadets have retained that knowledge, feel free to include additional reminders or resources for it.
 2. The land domain should have a variety of scenarios ready to be deployed against the trainees as they protect their team and their base.
     - Upset locals, enemy scouts, social engineers, guns-blazing OPFOR, etc.
-3. When giving the optional objectives to the land domain, make it so that urgency is needed to complete them.
+3. When giving the additional objectives to the land domain, make it so that urgency is needed to complete them.
     - It should challenge the commander to quickly respond to a situation, while also encouraging the defenders to stay alert at all times.
 
 Augment the scenario as you see fit.
@@ -86,9 +86,9 @@ Team is briefed with the following:
     FOB Bravo has been established along the border of a near-peer nation. However, an internal vulnerability scan has reported that the physical and cyber defenses are in need of reinforcing. Your team has been assigned to provide added security to a portion of the FOB, while also configuring the firewalls on two sensitive devices to ensure that they are better protected against attacks. There have been OPFOR sighted within the region, and they may attempt to undermine both physical and cyber operations. Swift, decisive action will be needed to counteract these efforts. Allied military and civilian personnel are also active in the region, and proper care must be taken to ensure their objectives are not unnecessarily hindered.
     Your mission is complete once the firewalls have been properly configured, and you have verified it with the proper scanning technology. Ensure that OPSEC is maintained at all times, and that details of the firewall configurations are kept away from any unauthorized personnel. 
     For base entry:
-        • The challenge phrase is "**Wire**"
-        • The normal response is "**Chip**"
-        • The duress response is "**Port**"
+        - The challenge phrase is "Wire"
+        - The normal response is "Chip"
+        - The duress response is "Port"
 
 Print out the following and hand the useful information to them:
 
@@ -98,13 +98,19 @@ Print out the following and hand the useful information to them:
 
 3. Guide on how to use netcat: https://www.varonis.com/blog/netcat-commands
 
-### Opfor Guidance
+### OPFOR Guidance
 
-1. Feel free to sandbox some approaches to the FOB. While cyber is a decent portion of this GLP, the cadets are still being evaluated on their base defense strategies.
-2. 
+1. Feel free to sandbox some approaches to the FOB, ranging from benign to outright aggressive. While cyber is a decent portion of this GLP, the cadets are still being evaluated on their base defense strategies.
+2. For at least one of the friendly civilian personnel to approach the FOB, try to tailgate behind them. 
+3. Do not assume that you know the challenge and response phrases unless you can overhear it and reasonably guess it.
 
 ### Onsite Setup
 1. -
 2. -
 3. -
-4. Keep track of time. Every 10 minutes after the briefing phase, include a new challenge to the team that has a 5 minute time limit. IED/UXOs can be located on the premises, a DDoS attack is launched and all the cadets' personal devices are a part of the botnet, hostile forces are spotted tampering with cables just outside of the base's premises, etc. 
+
+### Additional Objectives
+Every 10 minutes after the briefing phase, include one of the following challenge (max 10 minutes to complete):
+1. An RPG has been launched into the base, but it did not detonate. The ground team must perform the 5Cs and call in a 9-Line. Failure results in at least one of the cyber team and one of the ground team becoming wounded by it.
+2. A DDoS attack has been launched, and all the cadets' cell phones are a part of the botnet. The cyber team must acquire the IPv4 addresses of their cell phones and must add rules to block them on the firewall. Failure results in the ground team only being able to use non-digital communications for the rest of the GLP.
+3. Unidentified forces are spotted tampering with cables just outside of the base's premises. The ground team must deal with the sabotagers while maintaining security. Failure results in a 2-minute hands off period for the cyber team.
