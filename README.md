@@ -55,54 +55,45 @@ Technical Objectives:
 3. Intro to netcat
 
 Tools:
-1. Two Ubuntu machines (with iptables installed but not configured)
-2. 
+1. Two Ubuntu machines
+2. Network connection between the two (full Internet access not required)
 
 ### Setup
 
-1. -
-2. -
-3. -
+**NOTE:** "PC1" will refer to the machine that the cadets will have direct access to. "PC2" will refer to the machine that they will have to SSH into.
+
+1. Download and configure Ubuntu onto two computers, or two virtual machines
+    - https://ubuntu.com/download/desktop
+2. Download iptables on both computers, and download netcat on PC1
+3. Ensure that the SSH port is open on both machines
+    - Configure SSH: https://linuxize.com/post/how-to-enable-ssh-on-ubuntu-20-04/
+    - sudo iptables -A INPUT -p tcp --dport 22 -m conntrack --ctstate NEW,ESTABLISHED -j ACCEPT
+    - sudo iptables -A OUTPUT -p tcp --sport 22 -m conntrack --ctstate ESTABLISHED -j ACCEPT
+4. Have an easy set of credentials for the PC1, but have a much more difficult one for PC2 (examples below)
+    - PC1
+        • Username: user1
+        • Password: password
+    - PC2
+        • Username: user2
+        • Password: Y0uW1llNev3rGue$$!
 
 ### Scenario
 
-Team is briefed with the following or using the presentation found in `Presentation/`':
+Team is briefed with the following:
 
-    Intel has located a nefarious hacking group, known only as Hexfall, in a nearby facility. Hexfall was brought to the the governments attention after they opened an online weapons marketplace. Due to increasing demand of black market guns, the store is shipping thousands of dollars worth of weapons daily. It is believed they have two crates of weapons onsite as well as the hardware to run their own online weapons marketplace. You are being tasked with taking down the operation. You must take down the online weapon marketplace and take control of both weapons crates.
-
-    Additionally, it is believed Hexfall has a small infrastructure of computers. But, due to the sensitive nature of their network, it cannot be moved until the website is disabled. Therefore, you will be tasked with taking Hexfall's website offline on location.
-
-    To do this it is believed Hexfall's lead hacker has a flash drive where he stores the passwords to all their computers. You must obtain the flash drive, get the passwords, login to the remote server, and takedown the website.
-
-    Your mission is complete when you take down the Hexfall website and take control of both weapons crates.
-
-    Below is a list of helpful guides a technical specialist has prepared for you.
+    -
 
 Print out the following and hand the useful information to them:
 
-1. Crack a password protected file: https://linuxconfig.org/how-to-crack-zip-password-on-kali-linux
+1. Guide on how to write iptables rules: https://www.digitalocean.com/community/tutorials/iptables-essentials-common-firewall-rules-and-commands
 
 2. Guide on how to SSH into a remote server: https://linuxconfig.org/Ssh
 
-3. Shutting down the server: `systemctl -poweroff`
+3. Guide on how to use netcat: https://www.varonis.com/blog/netcat-commands
 
 ### Opfor Guidance
 
-Provide moderate resistance in Hexfall HQ shootout.
-
-Provide mild attacks during hacking campaign.
-
-Provide moderate resistance at second crate point.
-
-Provide mild resistance during evacuation.
+-
 
 ### Onsite Setup
-1. Plug in Server
-2. Verify website is runing, see `url.txt.` for site url
-3. Verify Server IP address, ssh into `pi@hexfallserver.student.rit.edu`
-4. Get IP address
-5. Load IP address and weapon crate (#2) location onto zip file `zip -e secret_files.zip file1.txt`
-6. Setup Kali box and optional LED lights
-7. Setup presentation and have print outs (and optionally: phone) ready
-8. Present presentation
-9. Hand out print outs and optionally the phone with tor browser installed
+1. -
