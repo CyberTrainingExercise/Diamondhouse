@@ -98,16 +98,16 @@ Print out the following and hand the useful information to them:
 
 They will have to write firewall rules on both PC1 and PC2 for the following (SOLUTION KEY, DO NOT SHOW TRAINEES):
 1. Block HTTP traffic both ways (port 80)
-    - iptables -A INPUT -p tcp --dport 80 -j DROP
-    - iptables -A OUTPUT -p tcp --sport 80 -j DROP
+    - iptables -A INPUT -p tcp --dport 80 -m conntrack --ctstate NEW,ESTABLISHED -j DROP
+    - iptables -A OUTPUT -p tcp --sport 80 -m conntrack --ctstate ESTABLISHED -j DROP
 2. Block POP3 traffic both ways (ports 110 and 995)
-    - iptables -A INPUT -p tcp --dport 110 -j DROP
-    - iptables -A OUTPUT -p tcp --sport 110 -j DROP
-    - iptables -A INPUT -p tcp --dport 995 -j DROP
-    - iptables -A OUTPUT -p tcp --sport 995 -j DROP
+    - iptables -A INPUT -p tcp --dport 110 -m conntrack --ctstate NEW,ESTABLISHED -j DROP
+    - iptables -A OUTPUT -p tcp --sport 110 -m conntrack --ctstate ESTABLISHED -j DROP
+    - iptables -A INPUT -p tcp --dport 995 -m conntrack --ctstate NEW,ESTABLISHED -j DROP
+    - iptables -A OUTPUT -p tcp --sport 995 -m conntrack --ctstate ESTABLISHED -j DROP
 3. Block Telnet traffic both ways (port 23)
-    - iptables -A INPUT -p tcp --dport 23 -j ACCEPT
-    - iptables -A OUTPUT -p tcp --sport 23 -j ACCEPT
+    - iptables -A INPUT -p tcp --dport 23 -m conntrack --ctstate NEW,ESTABLISHED -j DROP
+    - iptables -A OUTPUT -p tcp --sport 23 -m conntrack --ctstate ESTABLISHED -j DROP
 
 ### OPFOR Guidance
 1. Feel free to sandbox some approaches to the FOB, ranging from benign to outright aggressive. While cyber is a decent portion of this GLP, the cadets are still being evaluated on their base defense abilities.
