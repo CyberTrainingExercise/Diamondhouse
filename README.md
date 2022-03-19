@@ -58,7 +58,7 @@ Technical Objectives:
 
 Tools:
 1. Two Ubuntu machines
-2. Network connection between the two (full Internet access not required)
+2. Network connection between the two (Internet access not required)
 
 ### Setup
 
@@ -109,8 +109,8 @@ Print out the following and hand the useful information to them:
 2. -
 3. -
 
-### Additional Objectives
-Every 10 minutes after the briefing phase, include one of the following challenge (max 10 minutes to complete):
+### Injects
+Every 10 minutes after the briefing phase, include one of the following challenges (max 15 minutes to complete):
 1. An RPG has been launched into the base, but it did not detonate. The ground team must perform the 5Cs and call in a 9-Line. Failure results in at least one of the cyber team and one of the ground team becoming wounded by it.
 2. A DDoS attack has been launched, and all the cadets' cell phones are a part of the botnet. The cyber team must acquire the IPv4 addresses of their cell phones and must add rules to block them on the firewall. Failure results in the ground team only being able to use non-digital communications for the rest of the GLP.
-3. Unidentified forces are spotted tampering with cables just outside of the base's premises. The ground team must deal with the sabotagers while maintaining security. Failure results in a 2-minute hands off period for the cyber team.
+(OPTIONAL FOR EXTRA TIME) 3. Unidentified forces are spotted tampering with cables just outside of the base's premises. The ground team must deal with the sabotagers while maintaining security. Failure results in a 2-minute hands off period for the cyber team.
