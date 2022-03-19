@@ -94,7 +94,7 @@ Print out the following and hand the useful information to them:
 
 1. Guide on how to write iptables rules: https://www.digitalocean.com/community/tutorials/iptables-essentials-common-firewall-rules-and-commands
 2. Guide on how to SSH into a remote server: https://linuxconfig.org/Ssh
-3. Guide on how to use netcat: https://www.varonis.com/blog/netcat-commands
+3. Guide on how to use nmap: https://www.varonis.com/blog/nmap-commands
 
 They will have to write firewall rules on both PC1 and PC2 for the following (SOLUTION KEY, DO NOT SHOW TRAINEES):
 1. Block HTTP traffic both ways (port 80)
