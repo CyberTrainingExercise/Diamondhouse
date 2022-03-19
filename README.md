@@ -69,8 +69,8 @@ Tools:
 2. Download iptables on both computers, and download netcat on PC1
 3. Ensure that the SSH port is open on both machines
     - Configure SSH: https://linuxize.com/post/how-to-enable-ssh-on-ubuntu-20-04/
-    - sudo iptables -A INPUT -p tcp --dport 22 -m conntrack --ctstate NEW,ESTABLISHED -j ACCEPT
-    - sudo iptables -A OUTPUT -p tcp --sport 22 -m conntrack --ctstate ESTABLISHED -j ACCEPT
+    - iptables -A INPUT -p tcp --dport 22 -m conntrack --ctstate NEW,ESTABLISHED -j ACCEPT
+    - iptables -A OUTPUT -p tcp --sport 22 -m conntrack --ctstate ESTABLISHED -j ACCEPT
 4. Have an easy set of credentials for the PC1, but have a much more difficult one for PC2 (examples below)
     - PC1
         • Username: _user1_
@@ -84,7 +84,7 @@ Tools:
 Team is briefed with the following:
 
     FOB Bravo has been established along the border of a near-peer nation. However, an internal vulnerability scan has reported that the physical and cyber defenses are in need of reinforcing. Your team has been assigned to provide added security to a portion of the FOB, while also configuring the firewalls on two sensitive devices to ensure that they are better protected against attacks. There have been OPFOR sighted within the region, and they may attempt to undermine both physical and cyber operations. Swift, decisive action will be needed to counteract these efforts. Allied military and civilian personnel are also active in the region, and proper care must be taken to ensure their objectives are not unnecessarily hindered.
-    Your mission is complete once the firewalls have been properly configured, and you have verified it with the proper scanning technology. Ensure that OPSEC is maintained at all times, and that details of the firewall configurations are kept away from any unauthorized personnel. 
+    Your mission is complete once the firewalls have been properly configured, and you have verified it with the proper scanning technology. You must also keep the base secure for 30 minutes. Ensure that OPSEC is maintained at all times, and that details of the firewall configurations are kept away from any unauthorized personnel.
     For base entry:
         - The challenge phrase is "Wire"
         - The normal response is "Chip"
@@ -93,21 +93,31 @@ Team is briefed with the following:
 Print out the following and hand the useful information to them:
 
 1. Guide on how to write iptables rules: https://www.digitalocean.com/community/tutorials/iptables-essentials-common-firewall-rules-and-commands
-
 2. Guide on how to SSH into a remote server: https://linuxconfig.org/Ssh
-
 3. Guide on how to use netcat: https://www.varonis.com/blog/netcat-commands
 
-### OPFOR Guidance
+They will have to write firewall rules on both PC1 and PC2 for the following (SOLUTION KEY, DO NOT SHOW TRAINEES):
+1. Block HTTP traffic both ways (port 80)
+    - iptables -A INPUT -p tcp --dport 80 -j DROP
+    - iptables -A OUTPUT -p tcp --sport 80 -j DROP
+2. Block POP3 traffic both ways (ports 110 and 995)
+    - iptables -A INPUT -p tcp --dport 110 -j DROP
+    - iptables -A OUTPUT -p tcp --sport 110 -j DROP
+    - iptables -A INPUT -p tcp --dport 995 -j DROP
+    - iptables -A OUTPUT -p tcp --sport 995 -j DROP
+3. Block Telnet traffic both ways (port 23)
+    - iptables -A INPUT -p tcp --dport 23 -j ACCEPT
+    - iptables -A OUTPUT -p tcp --sport 23 -j ACCEPT
 
-1. Feel free to sandbox some approaches to the FOB, ranging from benign to outright aggressive. While cyber is a decent portion of this GLP, the cadets are still being evaluated on their base defense strategies.
+### OPFOR Guidance
+1. Feel free to sandbox some approaches to the FOB, ranging from benign to outright aggressive. While cyber is a decent portion of this GLP, the cadets are still being evaluated on their base defense abilities.
 2. For at least one of the friendly civilian personnel to approach the FOB, try to tailgate behind them. 
 3. Do not assume that you know the challenge and response phrases unless you can overhear it and reasonably guess it.
 
 ### Onsite Setup
-1. -
-2. -
-3. -
+1. Have a large enough FOB where digital communications (i.e. radios, phone calls, texts, etc) are required, due to distance
+2. Have the laptop and VMs already set up on-site
+3. Test to ensure the VMs can communicate with each other
 
 ### Injects
 Every 10 minutes after the briefing phase, include one of the following challenges (max 15 minutes to complete):
