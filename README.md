@@ -54,7 +54,7 @@ Time: 40 mins
 Technical Objectives:
 1. Intro to Ubuntu
 2. Intro to iptables
-3. Intro to netcat
+3. Intro to nmap
 
 Tools:
 1. Two Ubuntu machines
@@ -66,7 +66,7 @@ Tools:
 
 1. Download and configure Ubuntu onto two computers, or two virtual machines
     - https://ubuntu.com/download/desktop
-2. Download iptables on both computers, and download netcat on PC1
+2. Download iptables on both computers, and download nmap on PC1
 3. Ensure that the SSH port is open on both machines
     - Configure SSH: https://linuxize.com/post/how-to-enable-ssh-on-ubuntu-20-04/
     - iptables -A INPUT -p tcp --dport 22 -m conntrack --ctstate NEW,ESTABLISHED -j ACCEPT
