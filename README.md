@@ -35,7 +35,7 @@ The CTX is a timed trial, where the duration is partially on the cyber team's ab
 
 The CTX admin will be expected to use a space that is suitable for base defense. It can be performed in indoor or outdoor locations, as long as there is wireless Internet connection (a single laptop can suffice for the cyber domain). When implementing the CTX, keep the following in mind:
 
-1. The cyber domain assumes that some of the skills learned in CTX1 can be applied here, namely SSH.
+1. The cyber domain assumes that some of the skills learned in CTX0 Hexfall can be applied here, namely SSH.
     - If you do not feel confident that the cadets have retained that knowledge, feel free to include additional reminders or resources for it.
 2. The land domain should have a variety of scenarios ready to be deployed against the trainees as they protect their team and their base.
     - Upset locals, enemy scouts, social engineers, guns-blazing OPFOR, etc.
@@ -48,7 +48,7 @@ Augment the scenario as you see fit.
 
 For: POC
 Time: 40 mins
- - 10 for planning
+ - 10 for intro + planning
  - 30 for execution
 
 Technical Objectives:
