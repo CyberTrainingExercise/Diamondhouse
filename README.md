@@ -24,9 +24,9 @@ Estimated skills (see [skill levels](https://github.com/CyberTrainingExercise/Do
 - Pentesting skills required (0-3)
     - 1
 
-Time: 40 mins
+Time: 50 mins
  - 10 for intro + planning
- - 30 for execution
+ - 40 for execution
 
 Technical Objectives:
 1. Intro to Ubuntu
@@ -130,7 +130,7 @@ They will have to write firewall rules on both PC1 and PC2 for the following (SO
 
 ### Injects
 
-Every 10 minutes after the briefing phase, include one of the following challenges (max 15 minutes to complete):
+Every 15 minutes after the briefing phase, include one of the following challenges (max 15 minutes to complete):
 1. An RPG has been launched into the base, but it did not detonate. The ground team must perform the 5Cs and call in a 9-Line. Failure results in at least one of the cyber team and one of the ground team becoming wounded by it.
 1. A DDoS attack has been launched, and all the cadets' cell phones are a part of the botnet. The cyber team must acquire the IPv4 addresses of their cell phones and must add rules to block them on the firewall. Failure results in the ground team only being able to use non-digital communications for the rest of the GLP.
 1. (OPTIONAL FOR EXTRA TIME) Unidentified forces are spotted tampering with cables just outside of the base's premises. The ground team must deal with the sabotagers while maintaining security. Failure results in a 2-minute hands off period for the cyber team.
