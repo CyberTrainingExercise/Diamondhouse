@@ -71,24 +71,28 @@ Augment the scenario as you see fit.
 
 1. Download and configure Ubuntu onto two computers, or two virtual machines
     - https://ubuntu.com/download/desktop
-2. Download iptables on both machines, and download nmap on PC1
-3. Ensure that the SSH port is open on both machines
+1. Download iptables on both machines, and download nmap on PC1
+1. Ensure that the SSH port is open on both machines
     - Configure SSH: https://linuxize.com/post/how-to-enable-ssh-on-ubuntu-20-04/
     - iptables -A INPUT -p tcp --dport 22 -m conntrack --ctstate NEW,ESTABLISHED -j ACCEPT
     - iptables -A OUTPUT -p tcp --sport 22 -m conntrack --ctstate ESTABLISHED -j ACCEPT
-4. Have an easy set of credentials for the PC1, but have a much more difficult one for PC2 (examples below)
+1. Have an easy set of credentials for the PC1, but have a much more difficult one for PC2 (examples below)
     - PC1
         • Username: _user1_
         • Password: _password_
     - PC2
         • Username: _user2_
         • Password: _Y0uW1llNev3rGue$$!_
+1. Ensure you have a ground location that is suitable
+    - For example:
+    ![image](FieldDiagram.drawio.png)
+
 
 ### Scenario
 
 Team is briefed with the following alongside the PowerPoint found in `Presentation/`:
 
-    FOB Bravo has been established along the border of a near-peer nation. However, an internal vulnerability scan has reported that the physical and cyber defenses are in need of reinforcing. Your team has been assigned to provide added security to a portion of the FOB, while also configuring the firewalls on two sensitive devices to ensure that they are better protected against attacks. There have been OPFOR sighted within the region, and they may attempt to undermine both physical and cyber operations. Swift, decisive action will be needed to counteract these efforts. Allied military and civilian personnel are also active in the region, and proper care must be taken to ensure their objectives are not unnecessarily hindered.
+    FOB Diamond has been established along the border of a near-peer nation. It contains a satellite terminal used to provide comms to the nearby friendly forces. However, an internal vulnerability scan has reported that the physical and cyber defenses are in need of reinforcing. Your team has been assigned to provide added security to a portion of the FOB, while also configuring the firewalls on two sensitive devices to ensure that they are better protected against attacks. There have been OPFOR sighted within the region, and they may attempt to undermine both physical and cyber operations. Swift, decisive action will be needed to counteract these efforts. Allied military and civilian personnel are also active in the region, and proper care must be taken to ensure their objectives are not unnecessarily hindered.
     Your mission is complete once the firewalls have been properly configured, and you have verified it with the proper scanning technology. You must also keep the base secure for 30 minutes. Ensure that OPSEC is maintained at all times, and that details of the firewall configurations are kept away from any unauthorized personnel.
     For base entry:
         - The challenge phrase is "Wire"
